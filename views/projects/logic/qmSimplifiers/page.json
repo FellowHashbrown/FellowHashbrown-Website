@@ -1,0 +1,4 @@
+{
+    "title": "Quine-McCluskey Simplifiers",
+    "description": "in my discrete mathematics back in my sophomore year of college, we learned to simplify logical expressions. it was easy to do that by hand because all we had to do was decide which law was best to use to simplify the expression. however, doing that in code was not as easy because it's a little more difficult to have a computer decide what to do"
+}

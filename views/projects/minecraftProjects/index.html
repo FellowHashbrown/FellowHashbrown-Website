@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include ('../../../partials/head.html') %>
+    </head>
+    <body class="body">
+
+        <!--Top Bar and Navigation Sidebar-->
+        <%- include ('../../../partials/nav.html') %>
+
+        <!--Content-->
+        <div class="content">
+            <%- include ('../../../partials/page.html') %>
+
+            <a name="bedrockEdition"></a>
+            <h2 class="section">
+                <span class="code-class"><code class="code-field">minecraftProjects</code>.</span><code class="code-field">bedrockEdition</code>();
+            </h2>
+            <div class="section-block">
+
+            </div>
+
+            <a name="javaEdition"></a>
+            <h2 class="section">
+                <span class="code-class"><code class="code-field">minecraftProjects</code>.</span><code class="code-field">javaEdition</code>();
+            </h2>
+            <div class="section-block">
+                
+            </div>
+
+        </div>
+
+        <script src="/script.js"></script>
+    </body>
+    <%- include('../../../partials/footer.html') %>
+</html>

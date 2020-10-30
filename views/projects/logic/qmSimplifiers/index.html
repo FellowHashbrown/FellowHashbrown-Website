@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include ('../../../../partials/head.html') %>
+    </head>
+    <body class="body">
+
+        <!--Top Bar and Navigation Sidebar-->
+        <%- include ('../../../../partials/nav.html') %>
+
+        <!--Content-->
+        <div class="content">
+            <%- include ('../../../../partials/page.html') %>
+
+            <a name="pyqm"></a>
+            <h2 class="section">
+                <span class="code-class"><code class="code-field">qmSimplifiers</code>.</span><code class="code-field">PyQM</code>();
+            </h2>
+            <div class="section-block">
+                i learned of the Quine-McCluskey algorithm which is a process for logical expressions to be simplified and it's easy to implement in code as well. <br>
+                therefore, <a href="https://github.com/FellowHashbrown/PyQM" class="link">PyQM</a> was born.
+            </div>
+
+            <a name="jqm"></a>
+            <h2 class="section">
+                <span class="code-class"><code class="code-field">qmSimplifiers</code>.</span><code class="code-field">JQM</code>();
+            </h2>
+            <div class="section-block">
+                just like i did with my <a href="/projects/logic/logicParsers" class="link">logic parsers</a>, i started translating into other languages.
+                the first language i translated into was java since i am most familiar with Python and Java in that order. <br>
+                here is the <a href="https://github.com/FellowHashbrown/JQM" class="link">github</a> link to it!
+            </div>
+
+            <a name="qm.js"></a>
+            <h2 class="section">
+                <span class="code-class"><code class="code-field">qmSimplifiers</code>.</span><code class="code-field">QMjs</code>();
+            </h2>
+            <div class="section-block">
+                before i started developing QM.js, i had very little expertise in JavaScript. 
+                however, with the help of a friend of mine, i learned pretty quickly and implemented the Quine-McCluskey algorithm in JavaScript as well <br>
+                here is the <a href="https://github.com/FellowHashbrown/QM.js" class="link">github</a> link to that
+            </div>
+
+        </div>
+
+        <script src="/script.js"></script>
+    </body>
+    <%- include('../../../../partials/footer.html') %>
+</html>

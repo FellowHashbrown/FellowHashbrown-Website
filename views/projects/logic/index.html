@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include ('../../../partials/head.html') %>
+    </head>
+    <body class="body">
+
+        <!--Top Bar and Navigation Sidebar-->
+        <%- include ('../../../partials/nav.html') %>
+
+        <!--Content-->
+        <div class="content">
+            <%- include ('../../../partials/page.html') %>
+
+            <a name="logicParsers"></a>
+            <h2 class="section">
+                <span class="code-class"><code class="code-field">logic</code>.</span><code class="code-field">logicParsers</code>();
+            </h2>
+            <div class="section-block">
+                i have multiple logic parsers written in different languages. i will add more to the list as i continue to learn different programming languages or
+                take time to implement it. <br>
+                as of now, i have the following logic parsers: <br>
+                <ul style="list-style: none;">
+                    <li><a href="/projects/logic/logicParsers#PyLogic" class="link">PyLogic</a></li>
+                    <li><a href="/projects/logic/logicParsers#JLogic" class="link">JLogic</a></li>
+                </ul>
+            </div>
+
+            <a name="qmSimplifiers"></a>
+            <h2 class="section">
+                <span class="code-class"><code class="code-field">logic</code>.</span><code class="code-field">qmSimplifiers</code>();
+            </h2>
+            <div class="section-block">
+                i have also written a few adaptations of the Quine-McCluskey algorithm that is used to simplify a logical expression <br>
+                as of now, i have these adaptations: <br>
+                <ul style="list-style: none;">
+                    <li><a href="/projects/logic/qmSimplifiers#PyQM" class="link">PyQM</a></li>
+                    <li><a href="/projects/logic/qmSimplifiers#JQM" class="link">JQM</a></li>
+                    <li><a href="/projects/logic/qmSimplifiers#QM.js" class="link">QM.js</a></li>
+                </ul>
+            </div>
+
+        </div>
+        
+        <script src="/script.js"></script>
+    </body>
+    <%- include('../../../partials/footer.html') %>
+</html>

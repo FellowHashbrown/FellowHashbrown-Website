@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include ('../../../../partials/head.html') %>
+    </head>
+    <body class="body">
+
+        <!--Top Bar and Navigation Sidebar-->
+        <%- include ('../../../../partials/nav.html') %>
+
+        <!--Content-->
+        <div class="content">
+            <%- include ('../../../../partials/page.html') %>
+
+            <a name="pylogic"></a>
+            <h2 class="section">
+                <span class="code-class"><code class="code-field">logicParsers</code>.</span><code class="code-field">PyLogic</code>();
+            </h2>
+            <div class="section-block">
+                PyLogic was the project i began with. i am most experienced in python (relative to java, javascript, c++, etc.) so that's why i started there. <br>
+                i translated it into java and then javascript (collaborating with <a href="https://github.com/fifiinart" class="link">fifiinart</a> on that one) <br>
+                here is the <a href="https://github.com/FellowHashbrown/PyLogic" class="link">github</a> link <br>
+                i have also written an <a href="/api#logic" class="link">API</a> for it you can use for any projects you wish to use it on
+
+            </div>
+
+            <a name="jlogic"></a>
+            <h2 class="section">
+                <span class="code-class"><code class="code-field">logicParsers</code>.</span><code class="code-field">JLogic</code>();
+            </h2>
+            <div class="section-block">
+                after writing PyLogic, i translated it into java and put it into an android app which i have available from the downloads page.
+                the functions are similar to PyLogic as well to reduce confusion among logic parsers. <br>
+                here is the <a href="https://github.com/FellowHashbrown/JLogic" class="link">github</a> link for JLogic
+            </div>
+
+        </div>
+
+        <script src="/script.js"></script>
+    </body>
+    <%- include('../../../../partials/footer.html') %>
+</html>

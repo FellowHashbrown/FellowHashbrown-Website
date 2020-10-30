@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include ('../partials/head.html') %>
+    </head>
+    <body class="body">
+
+        <!--Top Bar and Navigation Sidebar-->
+        <%- include ('../partials/nav.html') %>
+
+        <!--Content-->
+        <div class="content">
+            <%- include ('../partials/page.html') %>
+
+            <a name="about"></a>
+            <h2 class="section">
+                <span class="code-class"><code class="code-field">home</code>.</span><code class="code-field">about</code>();
+            </h2>
+            <div class="section-block">
+                greetings! this is my developer website :) <br>
+                my name is jonah, i'm currently a junior in college majoring in computer science. <br>
+                you'll find projects, my social media accounts, and APIs that i've written on my website. just use the navigation button on the top left!
+            </div>
+
+            <a name="social"></a>
+            <h2 class="section">
+                <span class="code-class"><code class="code-field">home</code>.</span><code class="code-field">social</code>();
+            </h2>
+            <div class="section-block">
+                i am available on a few social media sites, gaming platforms, and a few developer websites. if you'd like, go ahead and go to them <br> <br>
+                <div style="text-align: center;">
+                    <a href="https://instagram.com/FellowHashbrown" class="social-button" target="_blank"><img src="https://image.flaticon.com/icons/svg/174/174855.svg" class="social-image"></a>
+                    <a href="https://facebook.com/FellowHashbrown" class="social-button" target="_blank"><img src="https://image.flaticon.com/icons/svg/174/174848.svg" class="social-image"></a>
+                    <a href="https://twitter.com/FellowHashbrown" class="social-button" target="_blank"><img src="https://image.flaticon.com/icons/svg/174/174876.svg" class="social-image"></a>
+                    <a href="https://tumblr.com/blog/FellowHashbrown" class="social-button" target="_blank"><img src="https://image.flaticon.com/icons/svg/174/174875.svg" class="social-image"></a>
+                    <a href="https://steamcommunity.com/id/FellowHashbrown" class="social-button" target="_blank"><img src="https://www.freeiconspng.com/uploads/steam-icon-19.png" class="social-image"></a>
+                    <a href="https://twitch.tv/FellowHashbrown" class="social-button" target="_blank"><img src="https://image.flaticon.com/icons/svg/733/733577.svg" class="social-image"></a>
+                    <a href="https://pypi.org/user/FellowHashbrown" class="social-button" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/2000px-Python-logo-notext.svg.png" class="social-image"></a>
+                    <a href="https://github.com/FellowHashbrown" class="social-button" target="_blank"><img src="https://image.flaticon.com/icons/svg/733/733553.svg" class="social-image"></a>
+                    <a href="https://repl.it/@FellowHashbrown" class="social-button" target="_blank"><img src="https://avatars3.githubusercontent.com/u/983194?s=280&v=4" class="social-image"></a>
+                    <a href="https://npmjs.com/~fellowhashbrown" class="social-button" target="_blank"><img src="https://i.imgur.com/Dbmgxkw.jpg" class="social-image"></a>
+                </div>
+            </div>
+
+            <a name="discord"></a>
+            <h2 class="section">
+                <span class="code-class"><code class="code-field">home</code>.</span><code class="code-field">discord</code>();
+            </h2>
+            <div class="section-block">
+                my discord server is where you can make a suggestion or report a bug in any of my projects or APIs. <br>
+                if you're a developer like me, there are also some channels for you to get help in a few programming languages
+                don't hesitate to mention me in the server for anything!
+                <iframe src="https://discordapp.com/widget?id=521185038969208850&theme=dark" style="border: 1px solid #808080; border-radius: 5px;" width="100%" height="500px" allowtransparency="true" frameborder="0"></iframe>
+            </div>
+
+        </div>
+
+        <script src="/script.js"></script>
+    </body>
+    
+    <%- include('../partials/footer.html') %>
+
+</html>

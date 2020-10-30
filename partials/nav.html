@@ -1,0 +1,30 @@
+<div class="topnav <% if (breadcrumbs.length > 0) { %> no-border <% } %>">
+    <button class="openbutton" id="openbutton" onclick="navigation()">&lArr;</button>
+    <img src="/assets/logo.png" class="icon-image">
+</div>
+<% if (breadcrumbs.length > 0) { %>
+    <div class="breadcrumbs">
+        <span id="breadcrumbs"><%- breadcrumbs %></span>
+    </div>
+<% } %>
+<div id="navbar" class="navbar">
+    <div>
+        <a href="/">home</a>
+        <button class="dropdown-button">projects</button>
+        <div class="dropdown-content">
+            <button class="dropdown-button">bots</button>
+            <div class="dropdown-content">
+                <a href="/projects/bots/discordBots">discord bots</a>
+            </div>
+            <a href="/projects/games">games</a>
+            <a href="/projects/logic">logic</a>
+            <button class="dropdown-button">minecraft projects</button>
+            <div class="dropdown-content">
+                <a href="/projects/minecraftProjects/bedrockEdition">bedrock</a>
+                <a href="/projects/minecraftProjects/javaEdition">java</a>
+            </div>
+        </div>
+        <a href="/downloads">downloads</a>
+        <a href="https://api.fellowhashbrown.com" target="_blank">api</a>
+    </div>
+</div>
