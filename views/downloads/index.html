@@ -11,6 +11,22 @@
         <!--Content-->
         <div class="content">
             <%- include ('../../partials/page.html') %>
+
+            <% for (project in projects) { %>
+                <a name="<%=project %>"></a>
+                <h2 class="section">
+                    <span class="code-class"><code class="code-field">downloads</code>.</span><code class="code-field"><%=project %></code>();
+                </h2>
+                <div class="section-block">
+                    <% if (JSON.stringify(projects[project].platforms) === "{}") { %>
+                        <h5>There are no downloads available yet!</h5>
+                    <% } else { %>
+                        <% for (platform in projects[project].platforms) { %>
+                            <h3><%=platform %></h3>
+                        <% } %>
+                    <% } %>
+                </div>
+            <% } %>
         </div>
 
         <script src="/script.js"></script>

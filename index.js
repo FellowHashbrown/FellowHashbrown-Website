@@ -6,6 +6,7 @@ const spdy = require('spdy');
 var path = require('path');
 const fs = require('fs');
 const wrapAsync = require('express-async');
+const axios = require('axios');
 
 // Setup app
 const app = express()
@@ -44,6 +45,20 @@ function getPages(baseDir = './views', endpoint = '') {
         validPages.push('/')
     return validPages
 }
+
+// Create the downloads page json by retrieving it from the database
+//  which uses https://api.fellowhashbrown.com
+var downloadsJson = {};
+axios.get("https://api.fellowhashbrown.com/redirects")
+    .then(function (response) {
+        for (project in response.data.value) {
+            if (project !== "get2054") {
+                downloadsJson[project] = response.data.value[project];
+            }
+        }
+    }).catch(function (error) {
+        console.log(error);
+    });
 
 // Use the getPages() function to attach a GET request to all the pages
 //  get the JSON object of the API requests and responses to use for the API page
@@ -89,6 +104,7 @@ getPages().forEach(function(page) {
             "./views" + page + "/index.html", 
             { 
                 'page': pageJson,
+                "projects": downloadsJson,
                 "breadcrumbs": breadcrumbs
             }, 
             function(err, str) {
