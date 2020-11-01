@@ -21,6 +21,11 @@ a.anchor {
     visibility: hidden;
 }
 
+iframe {
+    border: 1px solid #808080;
+    border-radius: 5px;
+}
+
 /* - - - Navigation Styles - - - */
 
 .topnav {
