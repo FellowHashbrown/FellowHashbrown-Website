@@ -18,16 +18,17 @@ function navigation() {
     if (window.innerWidth >= 786) {
         targetSize = "200px";
     }
+    document.getElementById("hamburger").classList.toggle('active');
     if (document.getElementById("navbar").style.width == targetSize) {
         document.getElementById("navbar").style.width = "0";
         document.getElementById("navbar").style.borderRight = "0px";
-        document.getElementById("openbutton").style.marginLeft = "0";
+        document.getElementById("hamburger").style.marginLeft = "0";
         document.getElementById("breadcrumbs").style.marginLeft = "0";
 
     } else {
         document.getElementById("navbar").style.width = targetSize;
         document.getElementById("navbar").style.borderRight = "1px solid #808080";
-        document.getElementById("openbutton").style.marginLeft = targetSize;
+        document.getElementById("hamburger").style.marginLeft = targetSize;
         document.getElementById("breadcrumbs").style.marginLeft = targetSize;
     }
 }
