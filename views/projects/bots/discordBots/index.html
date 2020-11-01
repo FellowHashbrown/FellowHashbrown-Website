@@ -12,7 +12,7 @@
         <div class="content">
             <%- include ('../../../../partials/page.html') %>
 
-            <a name="omegaPsi"></a>
+            <a class="anchor" name="omegaPsi"></a>
             <h2 class="section">
                 <span class="code-class"><code class="code-field">discordBots</code>.</span><code class="code-field">omegaPsi</code>();
             </h2>
@@ -21,6 +21,40 @@
                 there are all sorts of commands and minigames in the bot and i am always open to suggestions and feedback. <br>
                 if you'd like to explore the commands and such in omega psi, <a href="https://omegapsi.fellowhashbrown.com" class="link">here</a> is a link to it! <br>
                 if you like the bot, <a href="https://discordapp.com/oauth2/authorize?client_id=535587516816949248&scope=bot&permissions=519232" class="link">invite</a> it to your own server!
+
+                below is a list of updates made to Omega Psi, take a look at them! <br><br>
+
+                <div style="text-align: center;">
+                <% for (update of omegaPsiUpdates) { %>
+                    <div>
+                        <a class="anchor" name="omegaPsi/<%=update.version %>"></a>
+                        <input type="checkbox" class="dropdown-data" id="version-<%=update.version %>" name="menu" />
+                        <label for="version-<%=update.version %>">
+                            <h3><%=update.version %> - 
+                                <span class="code-string"><%=update.date %>
+                                </span> <span class="dropdown-arrow-right">&#9654;</span>
+                                        <span class="dropdown-arrow-down">&#9660;</span>
+                            </h3>
+                        </label>
+                        <ul class="dropdown-data">
+                            <p><%=update.description %></p>
+                            <h4>Features</h4>
+                            <table class="download-table">
+                                <tr>
+                                    <th>Feature Type</th>
+                                    <th>Feature</th>
+                                </tr>
+                                <% for (feature of update.features) { %>
+                                    <tr>
+                                        <td><%=feature.type %></td>
+                                        <td><%=feature.feature %></td>
+                                    </tr>
+                                <% } %>
+                            </table>
+                        </ul>
+                    </div>
+                <% } %>
+                </div>
             </div>
 
         </div>

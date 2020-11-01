@@ -13,7 +13,7 @@
             <%- include ('../../partials/page.html') %>
 
             <% for (project in projects) { %>
-                <a name="<%=project %>"></a>
+                <a class="anchor" name="<%=project %>"></a>
                 <h2 class="section">
                     <span class="code-class"><code class="code-field">downloads</code>.</span><code class="code-field"><%=project %></code>();
                 </h2>
@@ -21,9 +21,35 @@
                     <% if (JSON.stringify(projects[project].platforms) === "{}") { %>
                         <h5>There are no downloads available yet!</h5>
                     <% } else { %>
+                        <ul class="change-log">
                         <% for (platform in projects[project].platforms) { %>
-                            <h3><%=platform %></h3>
+                            <li><div>
+                                <h3><%=platform %></h3>
+                                <table class="download-table">
+                                    <tr>
+                                        <th>version</th>
+                                        <th>link</th>
+                                        <th>release date</th>
+                                        <th>changelog</th>
+                                    </tr>
+                                    <% for (release of projects[project].platforms[platform]) { %>
+                                        <tr>
+                                            <td><%=release.version %></td>
+                                            <td><a href="<%=release.link %>" class="link">download</a></td>
+                                            <td><%=release.release_date %></td>
+                                            <td><div>
+                                                <ul class="change-log">
+                                                <% for (change of release.log) { %>
+                                                    <li><%=change %></li>
+                                                <% } %>
+                                                </ul>
+                                            </div></td>
+                                        </tr>
+                                    <% } %>
+                                </table>
+                            </div></li>
                         <% } %>
+                        </ul>
                     <% } %>
                 </div>
             <% } %>

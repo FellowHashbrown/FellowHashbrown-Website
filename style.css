@@ -14,6 +14,13 @@
     margin: 0px;
 }
 
+a.anchor {
+    display: block;
+    position: relative;
+    top: -100px;  /* Takes into account the breadcrumbs, if applicable */
+    visibility: hidden;
+}
+
 /* - - - Navigation Styles - - - */
 
 .topnav {
@@ -99,7 +106,7 @@
     height: 75px;
     margin: 0;
     background-color: #202020;
-    color: white;
+    color: #ec7600;
     border: 1px solid #808080;
     border-radius: 5px;
     font-family: 'Cutive Mono', monospace;
@@ -328,6 +335,12 @@
     background-color: #293134;
 }
 
+.change-log,
+.change-log li {
+    list-style-type: square;
+    font-style: italic;
+}
+
 /* - - - API Styles - - - */
 
 
@@ -336,7 +349,7 @@
     list-style-type: none;
 }
 
-.api-response-label, input, ul.api-response {
+.api-response-label, input.dropdown-data, ul.api-response, ul.dropdown-data {
     display: none;
 }
 
@@ -346,7 +359,8 @@ label {
     cursor: pointer;
 }
 
-input:checked~ul.api-response {
+input:checked~ul.api-response,
+input:checked~ul.dropdown-data {
     display: block;
 }
 
@@ -363,6 +377,12 @@ input:checked~ul.api-response {
     width: fit-content;
 }
 
+input:checked~label *.dropdown-arrow-right,
+input:not(:checked)~label *.dropdown-arrow-down {
+    visibility: hidden;
+    display: none;
+}
+
 /* - API Parameter Table - */
 
 .required {
@@ -376,40 +396,46 @@ input:checked~ul.api-response {
     border-radius: 5px;
 }
 
-.api-parameter-table {
+.api-parameter-table,
+.download-table {
 	border-collapse: collapse;
 	width: 100%;
+    font-size: 1.5vw;
 }
 
-.api-parameter-table {
-	font-size: 1.5vw;
-}
-
-.api-parameter-table th {
+.api-parameter-table th,
+.download-table th {
 	border: 1px solid #808080;
 	text-align: center;
 }
 
-.api-parameter-table td {
+.api-parameter-table td,
+.download-table td {
     border: 1px solid #808080;
     text-align: left;
 }
 
-.api-parameter-table tr:first-child th {
+.api-parameter-table tr:first-child th,
+.download-table tr:first-child th {
 	border-top: 0;
 }
 
-.api-parameter-table tr:last-child td {
+.api-parameter-table tr:last-child td,
+.download-table tr:last-child td {
 	border-bottom: 0;
 }
 
 .api-parameter-table tr td:first-child,
-.api-parameter-table tr th:first-child {
+.api-parameter-table tr th:first-child,
+.download-table tr td:first-child,
+.download-table tr th:first-child {
 	border-left: 0;
 }
 
 .api-parameter-table tr td:last-child,
-.api-parameter-table tr th:last-child {
+.api-parameter-table tr th:last-child,
+.download-table tr td:last-child,
+.download-table tr th:last-child {
 	border-right: 0;
 }
 

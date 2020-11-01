@@ -49,8 +49,10 @@ function getPages(baseDir = './views', endpoint = '') {
 // Create the downloads page json by retrieving it from the database
 //  which uses https://api.fellowhashbrown.com
 var downloadsJson = {};
-axios.get("https://api.fellowhashbrown.com/redirects")
-    .then(function (response) {
+axios.get("https://api.fellowhashbrown.com/redirects", {
+    headers: {
+        "X-FELLOW-KEY": process.env.X_FELLOW_KEY
+    }}).then(function (response) {
         for (project in response.data.value) {
             if (project !== "get2054") {
                 downloadsJson[project] = response.data.value[project];
@@ -59,6 +61,14 @@ axios.get("https://api.fellowhashbrown.com/redirects")
     }).catch(function (error) {
         console.log(error);
     });
+
+var omegaPsiJson = {};
+axios.get("https://api.fellowhashbrown.com/omegapsi")
+    .then(function (response) {
+        omegaPsiJson = response.data;
+    }).catch(function (error) {
+        console.log(error);
+    })
 
 // Use the getPages() function to attach a GET request to all the pages
 //  get the JSON object of the API requests and responses to use for the API page
@@ -105,6 +115,7 @@ getPages().forEach(function(page) {
             { 
                 'page': pageJson,
                 "projects": downloadsJson,
+                "omegaPsiUpdates": omegaPsiJson,
                 "breadcrumbs": breadcrumbs
             }, 
             function(err, str) {
