@@ -541,7 +541,8 @@ input:not(:checked)~label *.dropdown-arrow-down {
 
     /* - - - API Style - - - */
 
-    .api-parameter-table {
+    .api-parameter-table,
+    .download-table {
         font-size: 2.5vw;
     }
 }
