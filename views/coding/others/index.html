@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include ('../../../partials/head.html') %>
+    </head>
+    <body class="body">
+
+        <!--Top Bar and Navigation Sidebar-->
+        <%- include ('../../../partials/nav.html') %>
+
+        <!--Content-->
+        <div class="content">
+            <%- include ('../../../partials/page.html') %>
+
+            <a class="anchor" name="mediaQueue"></a>
+            <h2 class="section">
+                <span class="code-class"><code class="code-field">others</code>.</span><code class="code-field">mediaQueue</code>();
+            </h2>
+            <div class="section-block">
+                The Media Queue app that I've written is something I came up with while trying to keep
+                track of all the movies, shows, and podcasts i listen to or watch. I originally had the 
+                media queue in this app called Notion. which, i feel, is more of a notetaking sort of thing.
+                <br>
+                take a look at a simple description of how it works at 
+                <a href="https://github.com/FellowHashbrown/MediaQueue/blob/master/README.md" target="_blank" class="link">this link</a>
+            </div>
+
+        </div>
+        
+        <script src="/script.js"></script>
+    </body>
+    <%- include('../../../partials/footer.html') %>
+</html>

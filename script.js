@@ -21,14 +21,28 @@ function navigation() {
     document.getElementById("hamburger").classList.toggle('active');
     if (document.getElementById("navbar").style.width == targetSize) {
         document.getElementById("navbar").style.width = "0";
-        document.getElementById("navbar").style.borderRight = "0px";
         document.getElementById("hamburger").style.marginLeft = "0";
         document.getElementById("breadcrumbs").style.marginLeft = "0";
 
     } else {
         document.getElementById("navbar").style.width = targetSize;
-        document.getElementById("navbar").style.borderRight = "1px solid #808080";
         document.getElementById("hamburger").style.marginLeft = targetSize;
         document.getElementById("breadcrumbs").style.marginLeft = targetSize;
     }
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
 }

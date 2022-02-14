@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include ('../../partials/head.html') %>
+    </head>
+    <body class="body">
+
+        <!--Top Bar and Navigation Sidebar-->
+        <%- include ('../../partials/nav.html') %>
+
+        <!--Content-->
+        <div class="content">
+            <%- include ('../../partials/page.html') %>
+
+            <a class="anchor" name="introduction"></a>
+            <h2 class="section">
+                <code class="code-field">introduction</code>
+            </h2>
+            <div class="section-block">
+                you found the twitch section of my website! welcome. <br>
+                <strong>why i started streaming</strong> <br>
+                because why not. i started streaming with a more set schedule starting around july of 2021 when i had more time to do so. <br>
+                since then, i've graduated college and i have had more time to stream and work as i find a job in my field! <br> <br>
+                take a look at my channel trailer below! <br> <br>
+                <!-- <strong>mod application</strong> <br>
+                do you wanna be a mod? <button class="page-form-button" onclick="/twitch/mod">click here to apply!</button>
+                -->
+            </div>
+
+            <a class="anchor" name="channelTrailer"></a>
+            <h2 class="section">
+                <code class="code-field">channel trailer</code>
+            </h2>
+            <div class="section-block">
+                <iframe src="https://player.twitch.tv/?video=1171481054&parent=www.fellowhashbrown.com" class="section-block" frameborder="0" allowfullscreen="true" scrolling="no" height="500px" width="100%"></iframe>
+            </div>
+
+        </div>
+
+        <script src="/script.js"></script>
+    </body>
+    
+    <%- include('../../partials/footer.html') %>
+
+</html>
